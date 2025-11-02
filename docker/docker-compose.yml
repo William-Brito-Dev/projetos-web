@@ -1,0 +1,64 @@
+services:
+
+  site_portifolio:
+    image: nginx:latest
+    container_name: portifolio_nginx
+    ports:
+      - "8086:80"
+    volumes:
+      - ./portifolio-website:/usr/share/nginx/html:ro 
+    restart: always 
+
+
+  site_calculadora:
+    image: nginx:latest
+    container_name: calculadora_nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - ./calculator:/usr/share/nginx/html:ro 
+    restart: always
+
+
+  site_formulario_contato:
+    image: nginx:latest
+    container_name: formulario_de_contato_nginx
+    ports:
+      - "8082:80"
+    volumes:
+      - ./contact-form:/usr/share/nginx/html:ro 
+    restart: always
+
+
+  site_tela_login:
+    image: nginx:latest
+    container_name: tela_de_login_nginx
+    ports:
+      - "8083:80"
+    volumes:
+      - ./login-screen:/usr/share/nginx/html:ro 
+    restart: always
+
+
+  site_contador_numerico:
+    image: nginx:latest
+    container_name: contador_numerico_nginx
+    ports:
+      - "8084:80"
+    volumes:
+      - ./numeric-counter:/usr/share/nginx/html:ro 
+    restart: always
+
+
+  site_to_do_list:
+    image: nginx:latest
+    container_name: lista_de_tarefas_nginx
+    ports:
+      - "8085:80"
+    volumes:
+      - ./to-do-list:/usr/share/nginx/html:ro 
+    restart: always
+
+    db: 
+      image: postgres:latest
+      container_name: reverent_shaw

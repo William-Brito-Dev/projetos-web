@@ -1,0 +1,256 @@
+/* Estilo primário para MOBILE-FIRST */
+
+
+* {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/*
+Paleta de cores:
+    - White: #ff;
+    - Black: #000;
+*/
+
+:root {
+    --cor01: #fff;
+    --cor02: #000;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--cor-fundo1);
+}
+
+
+a.links-social {
+  display: inline-block;
+  vertical-align: middle;
+  
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transform: perspective(1px) translateZ(0);
+  
+  -webkit-transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+}
+
+
+.links-social:hover, .links-social:focus, .links-social:active {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+
+
+    background-color: var(--cor02);
+    color: var(--cor01);
+    
+    margin: 0.5%;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+
+body {
+    background-color: var(--cor01);
+    margin: 0;
+}
+
+
+.container-pai {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: anchor-center;
+
+    margin: 2%;
+    min-height: 77vh;
+}
+
+
+.container-informacoes {
+    height: 60vh;
+    padding: 20px;
+}
+
+
+.container-informacoes h1 {
+    font-size: 45px;
+    line-height: 1.2em;
+    padding-bottom: 15px;
+    
+}
+
+
+.container-informacoes p {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+
+.container-informacoes.links-social {
+    padding: 10px 10px 0 0;
+}
+
+
+.container-formulario {
+    border: 2.5px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    height: 420px;
+    width: 450px;
+}
+
+
+.campo-nome, .campo-email, .campo-celular {
+
+    text-align: left;
+    font-weight: bold;
+    
+}
+
+
+form input {
+    
+    width: 250px;
+    height: 25px;
+    border-radius: 15px;
+    border: 1px solid #808080;
+}
+
+
+form textarea {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+
+form button {
+    margin: 15px;
+}
+
+
+hr {
+    width: 95%;
+}
+
+
+footer {
+    position: relative;
+    color: var(--cor02);
+
+    border-radius: 2px;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* BREAKPOINT 01: tablets/notebooks (1024px) */
+
+@media (min-width: 1024px) {
+    header {
+        padding: 5px;
+    }
+
+    body {
+        margin: 0 auto;
+    }
+
+    .container-pai {
+        min-height: 70vh;
+    }
+
+}
+
+
+/* BREAKPOINT 02: desktops grande (768px) */
+ 
+
+@media (max-width: 768px) {
+    
+    header {
+        margin: 5px;
+        font-size: 1em;
+    }
+
+    
+    .container-pai {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    
+    .container-informacoes {
+        text-align: center;
+        height: 35vh;
+    }
+
+
+    .container-informacoes h1 {
+        font-size: 2rem;    
+    } 
+    
+
+    .container-informacoes p {
+        font-size: 1rem;
+    }    
+    
+    
+    .container-informacoes img {
+            width: 35px;
+            height: 35px;
+        }
+
+
+    .container-formulario {
+        margin: 20px;
+        width: 75%;
+        height: 35%;   
+    }
+
+
+    .container-formulario h1 {
+        font-size: 1.7rem;
+    }
+    
+
+    .container-formulario p {
+        font-size: 1rem;
+    }
+
+
+    .container-formulario .campo-celular, .campo-email, .campo-nome {
+        padding: 5px;
+    }
+
+
+    .container-formulario form textarea {
+        margin-top: 15px;
+        width: 315px;
+        
+    }
+
+
+    footer {
+        margin-bottom: 15px;
+    }
+}
