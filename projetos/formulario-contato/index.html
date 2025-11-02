@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de contato</title>
+</head>
+<header>
+    <a href="/portifolio-website/index.html" target="preview">Página Inicial</a>
+    <a href="#">Serviços</a>
+    <a href="#">Sobre</a>
+</header>
+<body>
+        <main class="container-pai">
+            
+            <div class="container-informacoes">
+                
+                <h1 class="titulo-alternado">Entre em contato conosco preenchendo o formulário ao lado</h1>
+                
+                <p>Acesse também nossas redes sociais </p>
+
+                    <a href="https://www.facebook.com/?locale=pt_BR" class="links-social">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="facebook-new"/>
+                    </a>
+
+                    <a href="https://www.instagram.com/" class="links-social">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png" alt="instagram-new--v1"/>
+                    </a>
+
+                    <a href="https://x.com/" class="links-social">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/>
+                    </a>
+
+                    <a href="https://www.tiktok.com" class="links-social">
+                        <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/tiktok--v1.png" alt="tiktok--v1"/>
+                    </a>
+            </div>      
+
+            <div class="container-formulario">
+                
+                <form method="post" action="dados_usuario.php">
+                    
+                    <h1>Formulário de contato</h1>
+                    
+                    <div class="campo-nome">
+                                <label for="name">Nome</label>
+                                <input type="text" name="name" required id="nome" maxlength="50">
+                            </div>
+                            
+                            <div class="campo-email">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" required id="email" maxlength="30">
+                            </div>
+                            
+                            <div class="campo-celular">
+                                <label for="phone">Celular</label>
+                                <input type="tel" name="Celular" required id="celular">
+                            </div>
+                            
+                            <div class="campo-mensagem">
+                                <label for="message"></label>
+                                <textarea name="message" placeholder="Digite sua mensagem" id="mensagem"></textarea>
+                            </div>
+
+                            <button type="submit">Enviar</button>
+                            <button type="reset">Limpar</button>
+                </form>
+            
+            </div>
+
+        </main>
+
+    <script src="interatividade.js"></script>
+
+</body>
+
+<hr>
+
+<footer>
+
+    <p>Copyright &copy; 2025</p>
+
+</footer>
+
+</html>

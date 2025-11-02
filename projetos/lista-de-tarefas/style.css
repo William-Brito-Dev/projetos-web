@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #282a36;
+    color: white;
+    margin: 0;
+}
+
+.container {
+    background-color: #44475a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #50fa7b;
+    margin-bottom: 25px;
+}
+
+.adicionar-tarefa {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#novaTarefa {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+    background-color: #f8f8f2;
+    color: #282a36;
+}
+
+#botaoAdicionar {
+    background-color: #8be9fd;
+    color: #282a36;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+#botaoAdicionar:hover {
+    background-color: #bdffff;
+}
+
+#listaDeTarefas {
+    list-style: none;
+    padding: 0;
+}
+
+#listaDeTarefas li {
+    background-color: #6272a4;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#listaDeTarefas li.completa {
+    text-decoration: line-through;
+    color: #ccc;
+    background-color: #55628b;
+}
+
+#listaDeTarefas li .botoes-acao button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-left: 10px;
+    transition: color 0.2s ease;
+}
+
+#listaDeTarefas li .botoes-acao .botao-remover:hover {
+    color: #ff5555;
+}
+
+#listaDeTarefas li .botoes-acao .botao-completar:hover {
+    color: #50fa7b;
+}
