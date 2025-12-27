@@ -1,0 +1,19 @@
+version: '3.8' # Define a versão do Docker Compose file
+
+services:
+  meu_postgres_db:
+    image: postgres:13 # Você pode usar outra versão, se preferir
+    container_name: meu_postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres # Altere para o seu usuário desejado
+      POSTGRES_PASSWORD: 9068 # Altere para sua senha desejada
+      POSTGRES_DB: meubanco # Altere para o nome do seu banco de dados
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+# Define o volume persistente para os dados do PostgreSQL
+volumes:
+  pgdata:
